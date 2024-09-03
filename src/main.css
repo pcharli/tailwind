@@ -2,8 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Roboto;
+    font-weight: 400;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    font-weight: 400;
+    src: url(./fonts/Merriweather-Regular.ttf);
+}
+
 @layer base {
     h1 {
-        @apply text-3xl;
+        @apply text-3xl text-pierre;
     }
+}
+html {
+    --myColor: blue;
+}
+.my-btn {
+    transition: all 2s;
+}
+.hidden {
+    display:inline-block;
+    opacity: .2;
+}
+
+.my-btn {
+    @apply bg-black/50 text-[--myColor] rounded-4xl py-2 px-4 m-4 border-2 border-gray-200;
+}
+.my-btn:hover {
+    @apply text-black bg-white border-pink-500;
 }
